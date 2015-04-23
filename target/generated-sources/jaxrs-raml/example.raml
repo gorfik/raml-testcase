@@ -1,0 +1,74 @@
+#%RAML 0.8
+title: jaxrstoraml
+baseUri: http://example.com
+schemas:
+  - dxsojobnumberrequest: !include schemas/dxsojobnumberrequest.xsd
+  - dxsojobnumberrequest-jsonschema: !include schemas/dxsojobnumberrequest-jsonschema.json
+  - dxsojobnumber: !include schemas/dxsojobnumber.xsd
+  - dxsojobnumber-jsonschema: !include schemas/dxsojobnumber-jsonschema.json
+  - dxsojob: !include schemas/dxsojob.xsd
+  - dxsojob-jsonschema: !include schemas/dxsojob-jsonschema.json
+  - dxsojobresponse: !include schemas/dxsojobresponse.xsd
+  - dxsojobresponse-jsonschema: !include schemas/dxsojobresponse-jsonschema.json
+  - dxsojobwithstringlist: !include schemas/dxsojobwithstringlist.xsd
+  - dxsojobwithstringlist-jsonschema: !include schemas/dxsojobwithstringlist-jsonschema.json
+  - dxsojobwithstringlistresponse: !include schemas/dxsojobwithstringlistresponse.xsd
+  - dxsojobwithstringlistresponse-jsonschema: !include schemas/dxsojobwithstringlistresponse-jsonschema.json
+/: 
+  delete: 
+    description: etwas
+    body: 
+      application/json: 
+        schema: dxsojobwithstringlist-jsonschema
+        example: !include examples/dxsojobwithstringlist.json
+      application/xml: 
+        schema: dxsojobwithstringlist
+        example: !include examples/dxsojobwithstringlist.xml
+    responses: 
+      200: 
+        description: etwas
+        body: 
+          application/xml: 
+            schema: dxsojobwithstringlistresponse
+            example: !include examples/dxsojobwithstringlistresponse.xml
+          application/json: 
+            schema: dxsojobwithstringlistresponse-jsonschema
+            example: !include examples/dxsojobwithstringlistresponse.json
+  put: 
+    description: etwas
+    body: 
+      application/json: 
+        schema: dxsojob-jsonschema
+        example: !include examples/dxsojob.json
+      application/xml: 
+        schema: dxsojob
+        example: !include examples/dxsojob.xml
+    responses: 
+      200: 
+        description: etwas
+        body: 
+          application/xml: 
+            schema: dxsojobresponse
+            example: !include examples/dxsojobresponse.xml
+          application/json: 
+            schema: dxsojobresponse-jsonschema
+            example: !include examples/dxsojobresponse.json
+  post: 
+    description: etwas
+    body: 
+      application/json: 
+        schema: dxsojobnumberrequest-jsonschema
+        example: !include examples/dxsojobnumberrequest.json
+      application/xml: 
+        schema: dxsojobnumberrequest
+        example: !include examples/dxsojobnumberrequest.xml
+    responses: 
+      200: 
+        description: etwas
+        body: 
+          application/xml: 
+            schema: dxsojobnumber
+            example: !include examples/dxsojobnumber.xml
+          application/json: 
+            schema: dxsojobnumber-jsonschema
+            example: !include examples/dxsojobnumber.json

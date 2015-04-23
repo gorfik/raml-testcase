@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="dxso-job-response" type="dxsoJobResponse"/>
+
+  <xs:element name="protocol" type="protocolEntry"/>
+
+  <xs:complexType name="dxsoJobResponse">
+    <xs:sequence>
+      <xs:element name="protocol" type="protocolEntry" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="protocolEntry">
+    <xs:sequence>
+      <xs:element name="context" type="xs:string" minOccurs="0"/>
+      <xs:element name="filename" type="xs:string" minOccurs="0"/>
+      <xs:element name="text" type="xs:string" minOccurs="0"/>
+      <xs:element name="time" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="type" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

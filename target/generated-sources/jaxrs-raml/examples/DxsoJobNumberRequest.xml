@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dxsojobnumberrequest>
+    <cashledgernames>some value</cashledgernames>
+    <ledgerfoldernames>some value</ledgerfoldernames>
+    <accountlength>some value</accountlength>
+    <jobid>some value</jobid>
+</dxsojobnumberrequest>
